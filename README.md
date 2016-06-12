@@ -39,6 +39,12 @@ Add the following to application.css:
  */
 ```
 
+Add the initializer to `config/initializers` with:
+```
+SweetAlertConfirm::Initializer.enable()
+```
+
+
 ### Custom options
 
 
