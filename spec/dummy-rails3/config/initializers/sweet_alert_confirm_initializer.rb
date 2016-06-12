@@ -1,0 +1,1 @@
+SweetAlertConfirm::Initializer.enable()

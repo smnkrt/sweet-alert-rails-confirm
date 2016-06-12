@@ -4,7 +4,7 @@ describe 'basic confirms', js: true, type: :feature do
   before do
     if ENV['USE_TURBOLINKS']
       visit root_path
-      page.execute_script('Turbolinks.visit("/confirms_page");') 
+      page.execute_script('Turbolinks.visit("/confirms_page");')
       #find_link('Index').trigger('click')
     else
       visit root_path
@@ -111,6 +111,12 @@ describe 'basic confirms', js: true, type: :feature do
     it_behaves_like 'Confirm shows correctly', true
   end
 
+  describe 'button_to links' do
+    before do
+      #visit confirms_page_path
+      find_button("Button_to delete confirm").trigger('click')
+    end
 
+    it_behaves_like 'Confirm shows correctly', true
+  end
 end
-

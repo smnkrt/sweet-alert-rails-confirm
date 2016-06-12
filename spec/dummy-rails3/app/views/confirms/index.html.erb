@@ -1,9 +1,9 @@
 <%= link_to 'Basic confirm', get_cow_path, id: 'basic-confirm', data: { text: 'nanana', confirm: 'Are you sure?' } %>
 <%= link_to 'Delete confirm', delete_cow_path,method: :delete, id: 'method-confirm', data: { text: 'nanana', confirm: 'Are you sure?' } %>
 <%= link_to 'Remote confirm', delete_cow_path,method: :delete, id: 'remote-confirm', data: { remote: 'true', 'sweet-alert-type' => 'info', text: 'nanana', confirm: 'Are you sure?' } %>
-<%= link_to 'Custom confirm', get_cow_path, id: 'custom-confirm', data: { 
-                                                                                                     :'confirm-button-text' => 'Im ready', 
-                                                                                                     :'cancel-button-text' => 'No way', 
+<%= link_to 'Custom confirm', get_cow_path, id: 'custom-confirm', data: {
+                                                                                                     :'confirm-button-text' => 'Im ready',
+                                                                                                     :'cancel-button-text' => 'No way',
                                                                                                      :'confirm-button-color' => '#66CD00',
                                                                                                      :'sweet-alert-type' => 'info',
                                                                                                      text: 'This is a subtitle',
@@ -17,3 +17,7 @@
 <%= form_tag(delete_cow_path, method: :delete) do %>
   <%= button_tag('Button_tag confirm', id: 'button-confirm', data: { text: 'nanana', confirm: 'Are you sure?' }) %>
 <% end %>
+
+
+<%= button_to 'Button_to confirm', get_cow_path, id: 'button-to-confirm', data: { text: 'nanana', confirm: 'Are you sure?' } %>
+<%= button_to 'Button_to delete confirm', delete_cow_path, method: :delete, id: 'button-to-delete-confirm', data: { text: 'nanana', confirm: 'Are you sure?' } %>
